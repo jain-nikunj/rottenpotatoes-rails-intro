@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
     if @sort != params[:sort] || @ratings != params[:ratings]
       flash.keep
       redirect_to movies_path(:sort => @sort, :ratings => @ratings)
+    end
     
     if @ratings
       @filtered_ratings = @ratings.keys
